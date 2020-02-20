@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+   <department name="Development" depId="1">
+      <employee empId="001">
+         <lastName>First LastName</lastName>
+         <firstName>First FirstName</firstName>
+         <birthDate>01.01.2000</birthDate>
+         <position>Department Manager</position>
+         <skills>
+            <skill>Communication</skill>
+            <skill>Java</skill>
+            <skill>Java</skill>
+         </skills>
+         <managerId>0</managerId>
+      </employee>
+      <employee empId="002">
+         <lastName> Second LastName2</lastName>
+         <firstName>Second FirstName2</firstName>
+         <birthDate>01.01.2001</birthDate>
+         <position>Developer</position>
+         <skills>
+            <skill>Sleeps only 2 hours per day</skill>
+            <skill>Overtimes without concerns</skill>
+            <skill>Works for food</skill>
+         </skills>
+         <managerId>001</managerId>
+      </employee>
+   </department>
+   <department name="Accounting" depId="2">
+      <employee empId="003">
+         <lastName>Third LastName</lastName>
+         <firstName>Third FirstName</firstName>
+         <birthDate>02.02.2002</birthDate>
+         <position>Department Manager</position>
+         <skills>
+            <skill>Communication</skill>
+            <skill>Java</skill>
+            <skill>C++</skill>
+         </skills>
+         <managerId>0</managerId>
+      </employee>
+      <employee empId="004">
+         <lastName>Forth LastName</lastName>
+         <firstName>Forth FirstName</firstName>
+         <birthDate>01.01.2010</birthDate>
+         <position>Department Worker</position>
+         <skills>
+            <skill>Communication</skill>
+         </skills>
+         <managerId>0</managerId>
+      </employee>
+   </department>
+</company>
