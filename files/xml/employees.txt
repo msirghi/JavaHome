@@ -7,8 +7,8 @@
          <birthDate>01.01.2000</birthDate>
          <position>Department Manager</position>
          <skills>
-            <skill>Communication</skill>
             <skill>Java</skill>
+            <skill>Communication</skill>
             <skill>Java</skill>
          </skills>
          <managerId>0</managerId>
