@@ -2,7 +2,9 @@ package thirdHomework.xml_parsing;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
@@ -17,8 +19,8 @@ import javax.xml.stream.events.XMLEvent;
 
 public class STAXManipulation {
   public static void main(String[] args) {
-//    parseFile();
-    queryFile("002");
+    parseFile();
+//    queryFile("002");
   }
 
   private static void queryFile(String empId) {
@@ -28,11 +30,12 @@ public class STAXManipulation {
     boolean bMarks = false;
     boolean skills = false;
     boolean employeeFound = false;
+    List list = new ArrayList<>();
 
     try {
       XMLInputFactory factory = XMLInputFactory.newInstance();
       XMLEventReader eventReader =
-              factory.createXMLEventReader(new FileReader("files/xml/employees.txt"));
+          factory.createXMLEventReader(new FileReader("files/xml/employees.txt"));
 
       while (eventReader.hasNext()) {
         XMLEvent event = eventReader.nextEvent();
@@ -45,9 +48,9 @@ public class STAXManipulation {
               employeeFound = attributes.next().getValue().equals(empId);
             } else if (qName.equalsIgnoreCase("lastName") && employeeFound) {
               bFirstName = true;
-            } else if (qName.equalsIgnoreCase("firstName")  && employeeFound) {
+            } else if (qName.equalsIgnoreCase("firstName") && employeeFound) {
               bLastName = true;
-            } else if (qName.equalsIgnoreCase("birthDate")  && employeeFound) {
+            } else if (qName.equalsIgnoreCase("birthDate") && employeeFound) {
               bNickName = true;
             } else if (qName.equalsIgnoreCase("position") && employeeFound) {
               bMarks = true;
@@ -59,6 +62,7 @@ public class STAXManipulation {
           case XMLStreamConstants.CHARACTERS:
             if (employeeFound) {
               Characters characters = event.asCharacters();
+              list.add(characters.getData());
               if (bFirstName) {
                 System.out.println("First Name: " + characters.getData());
                 bFirstName = false;
@@ -94,11 +98,12 @@ public class STAXManipulation {
     boolean bNickName = false;
     boolean bMarks = false;
     boolean skills = false;
+    List list = new ArrayList();
 
     try {
       XMLInputFactory factory = XMLInputFactory.newInstance();
       XMLEventReader eventReader =
-              factory.createXMLEventReader(new FileReader("files/xml/employees.txt"));
+          factory.createXMLEventReader(new FileReader("files/xml/employees.txt"));
 
       while (eventReader.hasNext()) {
         XMLEvent event = eventReader.nextEvent();
@@ -127,6 +132,8 @@ public class STAXManipulation {
 
           case XMLStreamConstants.CHARACTERS:
             Characters characters = event.asCharacters();
+            list.add(characters.getData());
+
             if (bFirstName) {
               System.out.println("First Name: " + characters.getData());
               bFirstName = false;
@@ -150,6 +157,8 @@ public class STAXManipulation {
             break;
         }
       }
+
+      System.out.println("List is: " + list);
     } catch (FileNotFoundException | XMLStreamException e) {
       e.printStackTrace();
     }

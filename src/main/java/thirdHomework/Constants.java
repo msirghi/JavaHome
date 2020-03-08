@@ -7,6 +7,7 @@ public class Constants {
   public static final String BIRTH_DATE = "birthDate";
   public static final String POSITION = "position";
   public static final String SKILL = "skill";
+  public static final String MANAGER_ID = "managerId";
 
   // attributes
   public static final String EMP_ID = "empId";
@@ -16,4 +17,5 @@ public class Constants {
   //  tags
   public static final String EMPLOYEE_TAG = "employee";
   public static final String DEPT_TAG = "department";
+  public static final String SKILLS_TAG = "skills";
 }

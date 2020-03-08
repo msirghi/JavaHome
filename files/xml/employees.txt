@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <company>
-   <department name="Development" depId="1">
+   <department depId="1" name="Development">
       <employee empId="001">
          <lastName>First LastName</lastName>
          <firstName>First FirstName</firstName>
@@ -26,7 +26,7 @@
          <managerId>001</managerId>
       </employee>
    </department>
-   <department name="Accounting" depId="2">
+   <department depId="2" name="Accounting">
       <employee empId="003">
          <lastName>Third LastName</lastName>
          <firstName>Third FirstName</firstName>
