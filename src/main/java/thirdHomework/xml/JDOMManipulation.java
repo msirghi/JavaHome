@@ -1,4 +1,4 @@
-package thirdHomework.xml_parsing;
+package thirdHomework.xml;
 
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;

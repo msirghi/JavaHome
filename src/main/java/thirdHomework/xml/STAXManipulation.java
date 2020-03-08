@@ -1,4 +1,4 @@
-package thirdHomework.xml_parsing;
+package thirdHomework.xml;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,7 +12,6 @@ import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.Characters;
-import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
@@ -113,10 +112,13 @@ public class STAXManipulation {
             String qName = startElement.getName().getLocalPart();
             if (qName.equalsIgnoreCase("department")) {
               Iterator<Attribute> attributes = startElement.getAttributes();
+
               String deptName = attributes.next().getValue();
               String deptId = attributes.next().getValue();
+
               System.out.println("Department name: " + deptName);
               System.out.println("Department id: " + deptId);
+
             } else if (qName.equalsIgnoreCase("lastName")) {
               bFirstName = true;
             } else if (qName.equalsIgnoreCase("firstName")) {

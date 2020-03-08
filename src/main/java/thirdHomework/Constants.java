@@ -18,4 +18,10 @@ public class Constants {
   public static final String EMPLOYEE_TAG = "employee";
   public static final String DEPT_TAG = "department";
   public static final String SKILLS_TAG = "skills";
+
+  //  paths
+  public static final String OLD_JSON_PATH = "./files/json/employees.json";
+  public static final String NEW_JSON_PATH = "./files/json/new_employees.json";
+  public static final String EMPLOYEES_TXT_PATH = "files/xml/employees.txt";
+  public static final String XLSX_FILE_NAME = "./files/excel/employees.xlsx";
 }

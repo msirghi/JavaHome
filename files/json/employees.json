@@ -1,0 +1,64 @@
+{
+  "departments": [
+    {
+      "name": "Development",
+      "depId": "1",
+      "employees": [
+        {
+          "empId": "1",
+          "lastName": "Last name 1",
+          "firstName": "First name 1",
+          "birthDate": "02.01.2020",
+          "position": "Department Manager",
+          "skills": [
+            "Communication",
+            "Java"
+          ],
+          "managerId": "0"
+        },
+        {
+          "empId": "2",
+          "lastName": "Last name ",
+          "firstName": "First name 2",
+          "birthDate": "07.03.2020",
+          "position": "Developer",
+          "skills": [
+            "Sleeps only 2 hours per day",
+            "Overtimes without concerns",
+            "Works for food"
+          ],
+          "managerId": "001"
+        }
+      ]
+    },
+    {
+      "name": "Accounting",
+      "depId": "2",
+      "employees": [
+        {
+          "empId": "1",
+          "lastName": "Last name 3",
+          "firstName": "First name 3",
+          "birthDate": "06.03.1998",
+          "position": "Product Manager",
+          "skills": [
+            "Communication",
+            "Java"
+          ],
+          "managerId": "0"
+        },
+        {
+          "empId": "2",
+          "lastName": "Last name 4",
+          "firstName": "First name 4",
+          "birthDate": "05.03.2020",
+          "position": "SCRUM Master",
+          "skills": [
+            "Works for food"
+          ],
+          "managerId": "001"
+        }
+      ]
+    }
+  ]
+}

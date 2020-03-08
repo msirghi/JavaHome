@@ -1,0 +1,1 @@
+{"departments":[{"depId":1,"name":"Development","employees":[{"empId":1,"lastName":"Last name 1","firstName":"First name 1","birthDate":"02.01.2020","position":"Department Manager","skills":["Communication","Java"],"managerId":0}]}]}
